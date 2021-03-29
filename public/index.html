@@ -26,8 +26,13 @@
       name: 'JuanSeDev'
     });
 
-    socketClient.on('message', function (payload) {
+    /* socketClient.on('new-message', function (payload) {
       console.log('Listen: ', payload);
+    }); */
+
+    socketClient.on('active-bands', function (payload) {
+      console.clear();
+      console.table(payload);
     });
   </script>
 </body>
